@@ -1,0 +1,165 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f0ecec;
+    display: none; /*Estaba con un grid*/
+    grid-template-rows: 10% 5% 78%;
+    row-gap: 2%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/************************
+CABECERA
+*************************/
+header{
+    width: 100%;
+    height: 100%; /*100% de ese 10%*/
+}
+
+#cabeceraCamarero{
+    width: 100%;
+    height: 100%; /*100% de ese 10%*/
+    border-bottom: 1px solid #c1d7ec;
+}
+
+#volver{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    height: 40px;
+    width: 90px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#volver:active{   
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+
+/********************
+PESTAÑAS
+*********************/
+
+.tabs{
+    width: 100%;
+    height: 100%; /*100% de ese 5%*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to left, #f0ecec 0%, #f0ecec 50%, #c1d7ec 50%, #c1d7ec 100%);
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: black;
+}
+
+.tabs h2{
+    position: relative;
+}
+
+.spanComidas{
+    left: -20px;
+}
+
+.spanBebidas{
+    right: -50px;
+}
+
+
+/******************
+TABLA
+*******************/
+
+main{
+    width: 100%;
+    height: 100%; /*100% de ese 78%*/
+    overflow-y: scroll;
+}
+
+#contenedor{
+    width: 100%;
+    height: 100%;
+}
+
+
+#divTableComidas, #divTableBebidas{
+    width: 100%;
+    height: 100%;
+}
+
+table{
+    overflow-y: scroll;
+    height: 100%;
+    font-size:11px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #729ea5;
+    border-collapse: collapse;
+}
+
+table th{
+    font-size: 14px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border: 1px solid #c1d7ec;
+    border-collapse: collapse;
+    position: sticky;
+    top: 0px;
+    height: 50px;
+}
+
+table tr{
+    background-color: #c1d7ec;
+}
+
+table td{
+    font-size: 11px;
+    border: 1px solid #729ea5;
+    border-width: 1px;
+    border-style: solid;
+    height: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+td > button{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    height: 30px;
+    width: 70px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);    
+}
+
+td > button:active{   
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+tr > td:nth-of-type(2n+1){
+    text-align: center;
+}
+
+tr > td:nth-of-type(4){
+    text-align: center;
+}
+
+tr > td:nth-of-type(2){
+    padding-left: 5px;
+}

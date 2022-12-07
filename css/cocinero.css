@@ -1,0 +1,129 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-color: #f0ecec;    
+    padding: 10px;
+    display: none;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/**
+* Sección COCINANDO
+*/
+#cocinando{
+    border: 1px solid #729ea5;
+    padding: 9px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    row-gap: 15px;
+    overflow-y: hidden;
+}
+
+#platoCocinando{
+    border-bottom: 1px solid #729ea5;
+}
+
+#platoCocinando button{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);    
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px 1px rgb(212, 212, 212);
+    float: right;
+}
+
+#platoCocinando button:active{   
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+/**
+* Sección platosEnEspera (ya están en los fogones)
+*/
+
+#platosEnEspera{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.lineaCocinando{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #729ea5;
+    padding-bottom: 5px;
+}
+
+.lineaCocinando button img{
+    width: 30px;
+    height: 30px;
+}
+
+.lineaCocinando button{    
+    height: 40px;
+    width: 40px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+}
+
+
+
+.lineaCocinando button:active{   
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+
+/**
+* Sección EN COLA
+*/
+
+#enCola{
+    border: 1px solid #729ea5;
+    padding: 9px;
+    height: 100%;
+}
+
+.pedidos{
+    border: 1px solid #729ea5;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.linea{
+    display: grid;
+    grid-template-columns: 50% 50%;    
+    justify-items: center;
+    border-bottom: 1px solid #729ea5;
+    padding: 5px 5px;
+    background-color: #e4edee;
+}
+
+.linea button{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    height: 30px;
+    width: 70px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+    grid-column: 1/3;
+    justify-self: end;
+}
+
+.linea button:active{   
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}

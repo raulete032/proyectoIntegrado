@@ -1,0 +1,189 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: none;
+    grid-template-columns: 60% 40%;
+    background-color: #f0ecec;
+}
+
+#salon{
+    background-color: #f0ecec;
+    display: grid;
+    grid-template-rows: repeat(9, auto);
+    grid-template-columns: repeat(4, auto);
+}
+
+#salon img{
+    width: 40%;
+    justify-self: center;
+}
+
+#mesa1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+
+#mesa2{
+    grid-column: 1/2;
+    grid-row: 3/5;
+}
+
+
+#mesa3{
+    grid-column: 1/2;
+    grid-row: 5/7;
+}
+
+#mesa4{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+
+#mesa5{
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+
+#mesa6{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+
+#mesa7{
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+
+
+#mesa8{
+    grid-column: 2/3;
+    grid-row: 5/7;
+}
+
+
+#mesa9{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+
+#mesa10{
+    grid-column: 3/4;
+    grid-row: 3/5;
+}
+
+
+
+#mesa11{
+    grid-column: 1/4;
+    grid-row: 7/9;
+}
+
+
+#mesa12{
+    grid-column: 3/4;
+    grid-row: 5/7;
+}
+
+
+#mesa13{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+
+#mesa14{
+    grid-column: 4/5;
+    grid-row: 3/5;
+}
+
+
+
+#mesa15{
+    grid-column: 4/5;
+    grid-row: 5/8;
+}
+
+
+
+#desglose{
+    width: 100%;
+    background-color: #c1d7ec;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    overflow-y: scroll;
+
+}
+
+#desglose div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+#desglose div p{
+    display: inline;
+    font-size: 23px;
+}
+
+#desglose div p:nth-of-type(2){
+    float: right;
+}
+
+#teclado{
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#teclado button{
+    width: 100%;
+    font-size: 20px;
+}
+
+#teclado button:nth-last-of-type(1){
+    grid-column: 1/4;
+    grid-row: 5/6;
+}
+
+button{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec) !important;
+    height: 40px;
+    width: 90px;
+    border: 1px gray solid !important;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212) !important;
+}
+
+button:active{   
+    transform: translateY(2px) !important;
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212) !important;
+}
+
+
+.quitar{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    padding: 0px;
+    text-align: center;
+}
+
+.quitar img{
+    width: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,344 @@
+html, body{
+    width: 100%;
+    height: 90%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #f0ecec;
+    display: none;
+    /* grid-template-rows: 10% 5% 78%; */
+    /* row-gap: 2%; */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+.tabs{    
+    width: 100%;
+    /*Acceso*/
+    /* background: linear-gradient(to right, #c1d7ec 0%, #c1d7ec 33%, #f0ecec 33%, #f0ecec 100%); */
+    
+    /*Ventas*/
+    /* background: linear-gradient(to right, #f0ecec 0%, #f0ecec 33%, #c1d7ec 33%, #c1d7ec 66%, #f0ecec 66%, #f0ecec 100% ); */
+
+    /*Carta*/
+    /* background: linear-gradient(to right, #f0ecec 0%, #f0ecec 66%, #c1d7ec 66%, #c1d7ec 100%); */
+
+    /* border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;    
+    color: black;
+    margin-top: 10px;
+}
+
+#acceso{
+    display: none;
+    justify-content: space-between;
+}
+
+#selectAcceso1, #selectAcceso2{
+    width: 320px;
+    height: 460px;
+}
+
+#divAcceso1{
+    /**/
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    /**/
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#divAcceso1 h2{
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+#selectAcceso1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#divBotones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#divAcceso2{
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#divBotonesPersonal{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+button{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);    
+}
+
+button:active{
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+
+
+#acceso button{
+    height: 40px;
+    width: 60px;    
+}
+
+
+
+#acceso button img{
+    width: 30px;
+}
+
+#bChangeAcceso{
+    width: 90px !important;
+}
+
+#divBotonesPersonal button, #divBotonesVentas button, #divBotonesCarta button{
+    width: 70px;
+    height: 70px;
+}
+
+#divBotonesPersonal button img{
+    width: 60px !important;
+}
+
+#divFormPersonal{
+    margin-top: 10px;
+    padding-top: 10px;
+}
+#divFormPersonal h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#divFormPersonal h4 span{
+    color: red;
+}
+
+#bCambiarPass{
+    width: fit-content !important;
+}
+
+#divFormPersonal input{
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+#error, #errorMaxComidas{
+    width: fit-content;
+    color: red;
+    background-color: rgb(230, 178, 178);
+    font-size: 23px;
+}
+
+#divBotonesVentas, #divBotonesCarta{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#divBotonesVentas button img, #divBotonesCarta button img{
+    width: 100%;
+}
+
+
+#divDatosVentas, #divDatosCarta{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+/****************************************************************/
+#divAnadirCategoriaComidia{
+    display: flex;
+    justify-content: space-between;
+}
+
+#divDatosCarta h2{
+    display: inline-block;
+}
+
+#divDatosCarta h2:nth-of-type(2){
+    float: right;
+}
+
+#formAnadeCateg{
+    padding-right: 20px;
+}
+
+#formAnadeCateg input{
+    margin-bottom: 10px;
+}
+
+#formAnadeCateg label{
+    margin-bottom: 10px;
+}
+
+#divInfoFilaCarta label{
+    margin-right: 5px;
+}
+
+#bCambiaIva{
+    height: 30px;
+    margin-left: 5px;
+}
+
+#bCambiaIva img{
+    width: 25px;
+}
+
+#modPorcenIva{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/****************************************************************/
+
+
+#bAddComida{
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+
+#bAddComida img{
+    width: 100%;
+}
+
+
+#divDatosVentas input{
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+
+#divTablaTotal, #divTablaMasVendidos{
+    width: 100%;
+    padding-left: 80px;
+}
+
+#divTablaTotal table, #divTablaMasVendidos table, #divTablaCarta table{
+    width: 50%;
+    border-collapse: collapse;
+    border: 2px solid #c1d7ec;
+    background-color: white;
+}
+
+#divTablaTotal table th, #divTablaMasVendidos table th, #divTablaCarta table th{
+    background-color: #f0ecec;
+    border: 2px solid #c1d7ec;
+}
+
+#divTablaTotal table td, #divTablaMasVendidos table td, #divTablaCarta table td{
+    border: 2px solid #c1d7ec;
+}
+
+table tr:hover{
+    background-color: #c1d7ec;
+}
+
+#labelPagVentas{
+    margin: 2px 5px;
+}
+
+.bPaginacion{
+    margin: 2px 5px;
+}
+
+#bFiltroMenosDe{
+    margin-left: 10px;
+}
+
+#bFiltrarCarta{
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#divInfoFilaCarta{
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #c1d7ec;
+    width: fit-content;
+	border-radius: 6px;  
+	box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+	text-shadow: 1px 1px 1px rgba(255,255,255,.9);
+}
+
+#divInfoFilaCarta input{
+    margin-top: 10px;
+}
+
+#divInfoFilaCarta label{
+    margin-left: 10px;
+}
+
+#divInfoFilaCarta textarea{
+    margin-top: 10px;
+    margin-left: 10px;
+    resize: none;
+}
+
+#divDatosCarta textarea{
+    resize: none;
+}
+
+#divDatosCarta p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#divInfoFilaCarta input[type=radio], #divDatosCarta input[type=radio]{
+    margin-left: 5px;
+}
+
+#divDatosCarta label{
+    margin-left: 10px;
+}
+
+#bAddComida2{
+    margin-top: 10px;
+}
+
+#divInfoFilaCarta button{
+    margin-top: 10px;
+}
+

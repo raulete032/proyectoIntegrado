@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <title>Camareros</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="../css/camarero.css">
+
+    <script src="../js/camarero.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <div id="cabeceraCamarero">
+
+      <button type="button" id="bListos0" class="btn btn-primary position-relative ventanaPedidosListos">
+        Listos
+        <span id="platosListos" class="position-absolute top-0 start-5 translate-middle badge rounded-pill bg-danger">
+        0
+        </span>      
+      </button>
+      <select id="mesas">
+        
+      </select>
+    </div>
+  </header>
+  
+  <div class="tabs">
+    <h2 id="tabCarta">Carta</h2>
+    <h2 id="tabPedido">Pedido</h2>
+  </div>
+
+  <main>
+    <div class="contenedor">
+      <div id="botonesComida">
+        
+      </div>
+
+      <div id="listadoPedido" style="display: none;">
+        <div id="divBotonesConfirm">
+          <button id="confirmar">Confirmar</button>
+          <button id="cerrarConsulta">Cerrar consulta</button>
+          <button id="consultaPedido">Consulta</button>
+        </div>
+        
+        <div id="divTable">
+          <table id="tablaPedido">
+            <tr>
+              <th>Comida</th>
+              <th>Unidades</th>
+              <th>Obser.</th>
+            </tr>
+            
+          </table>
+        <!-- <p id="errorPedido"></p> -->
+        </div>
+        
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

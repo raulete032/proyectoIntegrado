@@ -1,0 +1,297 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #f0ecec;
+    display: none;
+    grid-template-rows: 10% 5% 78%;
+    row-gap: 2%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/************************
+CABECERA
+*************************/
+
+header{
+    width: 100%;
+    height: 100%; /*100% de ese 10%*/
+}
+
+#cabeceraCamarero{
+    width: 100%;
+    height: 100%; /*100% de ese 10%*/
+    border-bottom: 1px solid #c1d7ec;
+}
+
+#bListos0{
+    margin-top: 20px;
+    margin-right: 5px;
+    float: right;
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    color: black;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+}
+
+#bListos0:active{
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+
+#bListos1{   
+    margin-top: 20px;
+    margin-right: 5px;
+    float: right;
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    color: black;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 4px 4px 14px 1px rgb(250, 132, 132), -4px -4px 14px 1px rgb(250, 132, 132);    
+    animation-name: neon;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; 
+    transition: box-shadow .5s linear;
+}
+
+#bListos1:active{
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+@keyframes neon {
+    0%{
+        box-shadow: 4px 4px 14px 1px rgb(250, 132, 132), -4px -4px 14px 1px rgb(250, 132, 132);
+    }
+    50%{
+        box-shadow: 0px 0px 0px 0px transparent, 0px 0px 0px 0px transparent;
+    }
+    100%{
+        box-shadow: 4px 4px 14px 1px rgb(250, 132, 132), -4px -4px 14px 1px rgb(250, 132, 132);
+    }     
+}
+
+/*Select de las mesas*/
+#mesas{
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+
+/****************
+PESTAÑAS
+*****************/
+
+.tabs{
+    width: 100%;
+    height: 100%; /*100% de ese 5%*/
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to left, #f0ecec 0%, #f0ecec 50%, #c1d7ec 50%, #c1d7ec 100%);
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: black;
+}
+
+
+/******
+MAIN
+********/
+
+main{
+    width: 100%;
+    height: 100%; /*100% de ese 75%*/   
+    overflow-y: scroll; 
+}
+
+
+
+/*********
+SECCIÓN DE LOS BOTONES
+**********/
+
+
+#botonesComida{
+    border-top: 1px solid #c1d7ec;
+    width: 100%;
+    height: 95%;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: start;
+}
+
+#titulo{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    position: sticky;
+    top: 0;
+    background-color: #f0ecec;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#botonesComida button{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    height: 70px;
+    width: 100%;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+}
+
+#botonesComida button:active{   
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+
+
+/*********
+SECCIÓN DE LA TABLA DE PEDIDOS
+**********/
+
+#divBotonesConfirm{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;    
+}
+
+#confirmar, #consultaPedido, #cerrarConsulta{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    height: 20%; 
+    width: 50%;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+}
+
+#confirmar:active, #consultaPedido:active, #cerrarConsulta:active{
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+#cerrarConsulta{
+    display: none;
+}
+
+#divTable{
+    height: 70%;
+    width: 97%;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+table{
+    font-size:11px;
+    color: black;
+    width: 100%;
+    border: 2px solid #729ea5;    
+    border-collapse: collapse;
+}
+
+table th{
+    font-size: 14px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    border: 1px solid #c1d7ec;    
+    border-collapse: collapse;
+    position: sticky;
+    top: 0;
+    height: 50px;
+}
+
+table tr{
+    background-color: #c1d7ec;
+}
+
+table td{
+    font-size: 11px;
+    border: 1px solid #729ea5;
+    border-width: 1px;
+    border-style: solid;
+    height: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+table input{
+    width: 50px;
+}
+
+
+.categoriaPedido, .nombreComida{
+    margin: 0;
+}
+
+table td textarea{
+    width: 100%;
+    height: 100%;
+}
+
+/*La columna de unidades*/
+table tr td:nth-of-type(2){
+    text-align: center;
+}
+
+/*Botones + y -*/
+table tr td:nth-of-type(2) button{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    height: 20%;
+    width: 50%;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+    font-size: 10px;
+}
+
+/*Al botón -*/
+table tr td:nth-of-type(2) button:nth-of-type(2){
+    margin-bottom: 5px;
+}
+
+table tr td:nth-of-type(2) button:active{
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
+
+
+table td p{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#bAnular, #bModificar{
+    background-image: linear-gradient(#c1d7ec, white, #c1d7ec);
+    height: 30%;
+    width: fit-content;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 2px rgb(212, 212, 212);
+    font-size: 10px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+
+#bAnular:active, #bModificar:active{
+    transform: translateY(2px);
+    box-shadow: 0px 0px 0px 0px rgb(212, 212, 212);
+}
